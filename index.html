@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+  minimum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <title>신한카드</title>
+  <link rel="stylesheet" href="css/sinhan_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+  <script src="js/sinhan_jquery.js"></script>
+</head>
+<body ontouchstart>
+  <header id="main_header">
+    <section class="header_top">
+      <nav class="tnb">
+        <ul class="left_tnb">
+          <li>
+            <button type=button>개인</button>
+            <div class="menu">
+              <a href="#" class="personal">개인</a>
+              <a href="#" class="corporate">법인</a>
+            </div>
+          </li>
+          <li><a href="#">가맹점</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">상품공시실</a></li>
+          <li><a href="#">금융소비자보호포털</a></li>
+        </ul>
+        <ul class="right_tnb">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="header_body">
+      <div class="body_inner">
+        <h1><a href="#"><img src="image/logo.png" alt="신한카드"></a></h1>
+        <nav class="gnb hidden">
+          <ul>
+            <li>
+              <a href="#">마이</a>
+              <div class="sub" data-max-height="300">
+                <ul>
+                  <li><a href="#">마이페이지</a></li>
+                </ul>
+                <ul>
+                  <li class="heading">
+                    이용내역
+                    <ul>
+                      <li><a href="#">이용내역·매출전표</a></li>
+                      <li><a href="#">이용실적·혜택</a></li>
+                      <li><a href="#">교통카드 이용내역</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    이용금액결제
+                    <ul>
+                      <li><a href="#">즉시결제</a></li>
+                      <li><a href="#">연체금액·결제일당일결제</a></li>
+                      <li><a href="#">결제내역</a></li>
+                      <li><a href="#">환불내역·즉시환불</a></li>
+                      <li><a href="#">분할납부</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                      이용한도
+                    <ul>
+                      <li><a href="#">이용한도조회·관리</a></li>
+                      <li><a href="#">이용한도변경</a></li>
+                      <li><a href="#">추가한도 이용신청</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    내정보관리
+                    <ul>
+                      <li><a href="#">내카드관리</a></li>
+                      <li><a href="#">회원정보변경</a></li>
+                      <li><a href="#">카드해지</a></li>
+                      <li><a href="#">온라인회원탈퇴</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                      소득공제
+                    <ul>
+                      <li><a href="#">소득공제조회</a></li>
+                      <li><a href="#">주택임대료(월세) 납부내역</a></li>
+                      <li><a href="#">교통카드 이용내역</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">혜택</a>
+              <div class="sub" data-max-height="280">
+                <ul>
+                  <li><a href="#">혜택 메인</a></li>
+                </ul>
+                <ul>
+                  <li class="heading">
+                    할인·포인트
+                    <ul>
+                      <li><a href="#">내가 받은 혜택</a></li>
+                      <li><a href="#">포인트조회·전환</a></li>
+                      <li><a href="#">포인트안내</a></li>
+                      <li><a href="#">캐시백안내</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    정부지원사업
+                    <ul>
+                      <li><a href="#">상생소비지원금</a></li>
+                      <li><a href="#">교육급여 바우처</a></li>
+                      <li><a href="#">아동급식카드·선불지원금</a></li>
+                      <li><a href="#">지역별 지원금</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    전용회원
+                    <ul>
+                      <li><a href="#">복지카드회원</a></li>
+                      <li><a href="#">웰프로카드회원</a></li>
+                      <li><a href="#">패밀리카드회원</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    가맹점혜택
+                    <ul>
+                      <li><a href="#">가맹점 찾기</a></li>
+                      <li><a href="#">무이자할부 안내</a></li>
+                      <li><a href="#">성남시 지역화폐 가맹점 등록</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">금융</a>
+              <div class="sub" data-max-height="280">
+                <ul>
+                  <li><a href="#">금융 메인</a></li>
+                </ul>
+                <ul>
+                  <li class="heading">
+                    마이 금융
+                    <ul>
+                      <li><a href="#">나의 금융상품</a></li>
+                      <li><a href="#">나만의 금융혜택</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    카드대출
+                    <ul>
+                      <li><a href="#">단기카드대출</a></li>
+                      <li><a href="#">장기카드대출</a></li>
+                      <li><a href="#">일부결제금액이월약정</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    일반대출
+                    <ul>
+                      <li><a href="#">대출신청</a></li>
+                      <li><a href="#">대출확정</a></li>
+                      <li><a href="#">이용내역</a></li>
+                      <li><a href="#">이동신청</a></li>
+                      <li><a href="#">결과조회</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    기타서비스
+                    <ul>
+                      <li><a href="#">대출서류 첨부</a></li>
+                      <li><a href="#">수수료율 안내</a></li>
+                      <li><a href="#">금리인하요구권 안내</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">카드</a>
+              <div class="sub" data-max-height="400">
+                <ul>
+                  <li><a href="#">카드 메인</a></li>
+                </ul>
+                <ul>
+                  <li class="heading">
+                    카드 안내
+                    <ul>
+                      <li><a href="#">신용카드</a></li>
+                      <li><a href="#">체크카드</a></li>
+                      <li><a href="#">제휴카드</a></li>
+                      <li><a href="#">가족카드</a></li>
+                      <li><a href="#">캐릭터카드</a></li>
+                      <li><a href="#">프리미엄카드</a></li>
+                      <li><a href="#">MY DIY</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    카드추천
+                    <ul>
+                      <li><a href="#">인기·추천카드</a></li>
+                      <li><a href="#">해외이용 추천카드</a></li>
+                      <li><a href="#">내게 맞는 카드찾기</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    카드 간편신청
+                    <ul>
+                      <li><a href="#">퀵 오더 발급</a></li>
+                      <li><a href="#">신용카드 간편신청</a></li>
+                      <li><a href="#">체크카드 간편신청</a></li>
+                      <li><a href="#">외국인카드 간편신청</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    발급조회·등록
+                    <ul>
+                      <li><a href="#">카드발급상황조회</a></li>
+                      <li><a href="#">카드사용등록</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">서비스</a>
+              <div class="sub" data-max-height="500">
+                <ul>
+                  <li><a href="#">서비스 메인</a></li>
+                </ul>
+                <ul>
+                  <li class="heading">
+                    정기결제
+                    <ul>
+                      <li><a href="#">정기결제플러스</a></li>
+                      <li><a href="#">아파트관리비</a></li>
+                      <li><a href="#">생활요금</a></li>
+                      <li><a href="#">4대 사회보험료</a></li>
+                      <li><a href="#">세금관리</a></li>
+                      <li><a href="#">스쿨뱅킹</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    구독
+                    <ul>
+                      <li><a href="#">쇼핑케어</a></li>
+                      <li><a href="#">마이카플러스</a></li>
+                      <li><a href="#">디저트Pcik</a></li>
+                      <li><a href="#">뷰티Pick</a></li>
+                      <li><a href="#">뮤직Pack</a></li>
+                      <li><a href="#">트래블ON</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    케어
+                    <ul>
+                      <li><a href="#">카드사용알림</a></li>
+                      <li><a href="#">보호 서비스</a></li>
+                      <li><a href="#">스마트 폰케어</a></li>
+                      <li><a href="#">안심 서비스</a></li>
+                      <li><a href="#">부동산지키미</a></li>
+                      <li><a href="#">파이낸스 세이프보험</a></li>
+                    </ul>
+                  </li>
+                  <li class="heading">
+                    해외토탈케어
+                    <ul>
+                      <li><a href="#">해외원화(DCC) 차단</a></li>
+                      <li><a href="#">해외사용안심설정(Self FDS)</a></li>
+                      <li><a href="#">해외정부거래차단(로밍활용)</a></li>
+                      <li><a href="#">해외출입국정보활용</a></li>
+                      <li><a href="#">해외이용환율선택</a></li>
+                      <li><a href="#">해외안심 가상카드번호</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">Tops Club</a>
+            </li>
+          </ul>          
+        </nav>
+        <div class="menu">
+          <button type="button" class="search">검색</button>
+          <a href="#" class="chatbot">챗봇</a>
+        </div>
+          <div class="search-container">
+            <input type="text" class="search-bar" placeholder="검색어를 입력해 주세요.">
+            <div class="search-recommend">
+              <p>인기 검색어</p>
+              <ul>
+                <li><a href="#">즉시결제</a></li>
+                <li><a href="#">이용한도</a></li>
+                <li><a href="#">명세서</a></li>
+              </ul>
+              <p>추천 검색어</p>
+              <ul>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">상담원연결</a></li>
+                <li><a href="#">포인트플랜+</a></li>
+                <li><a href="#">국민내일배움</a></li>
+                <li><a href="#">체크카드</a></li>
+              </ul>
+            </div>
+          </div>
+
+      </div>
+    </section>
+  </header>
+  <div id="overlay"></div>
+  <main id="main_container">
+    <section class="main_cards">
+      <div class="cards_control">
+        <ul>
+          <li class="popular"><a href="#">인기카드</a></li>
+          <li class="recommended"><a href="#">추천카드</a></li>
+        </ul>
+        <a href="#">카드 전체보기</a>
+      </div>
+      <div class="popular_cards">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="image/main_card1.gif" alt="">
+              <p>
+                <strong>신한카드 Point Plan+</strong>
+                생활/외식비 포인트 적립
+              </p>
+            </a>
+            <span>생활</span><span>적립</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="image/main_card2.png" alt="">
+              <p>
+                <strong>K-패스 신한카드</strong>
+                대중교통 10% 할인은 덤!
+              </p>
+            </a>
+            <span>교통</span><span>할인</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="image/main_card3.gif" alt="">
+              <p>
+                <strong>신한카드 SOL트래블 체크</strong>
+                해외 이용 수수료 면제는 물론!
+              </p>
+            </a>
+            <span>여행</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="image/main_card4.gif" alt="">
+              <p>
+                <strong>신한카드 처음</strong>
+                통신·구독·멤버십 최대 20% 적립
+              </p>
+            </a>
+            <span>일상</span><span>적립</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="image/main_card5.gif" alt="">
+              <p>
+                <strong>신한카드 SQL트래블</strong>
+                일상과 여행, 경계를 넘나드는 혜택
+              </p>
+            </a>
+            <span>여행</span><span>적립</span>
+          </li>
+        </ul>
+      </div>
+      <div class="recommended_cards">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="image/main_card6.png" alt="">
+              <p>
+                <strong>신한카드 Deep Dream</strong>
+                Platinum+ 서비스
+              </p>
+            </a>
+            <span>적립</span><span>할인</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="image/main_card7.png" alt="">
+              <p>
+                <strong>신한카드 Mr.Life</strong>
+                월납요금 할인!
+              </p>
+            </a>
+            <span>생활</span><span>할인</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="image/main_card8.gif" alt="">
+              <p>
+                <strong>신한카드 Deep Oil</strong>
+                속 깊은 주유혜택
+              </p>
+            </a>
+            <span>할인</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="image/main_card9.png" alt="">
+              <p>
+                <strong>신한카드 EVerywhere</strong>
+                전기차 충전요금 30~50% 캐시백
+              </p>
+            </a>
+            <span>생활</span><span>적립</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="image/main_card10.gif" alt="">
+              <p>
+                <strong>신한카드 Globus</strong>
+                해외 수수료 1.18% 할인
+              </p>
+            </a>
+            <span>해외</span><span>적립</span><span>할인</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="quick_menu">
+      <ul>
+        <li><a href="#"><span></span>월별명세서</a></li>
+        <li><a href="#"><span></span>이용내역</a></li>
+        <li><a href="#"><span></span>이용한도</a></li>
+        <li><a href="#"><span></span>즉시결제</a></li>
+        <li><a href="#"><span></span>포인트조회</a></li>
+        <li><a href="#"><span></span>실적·혜택</a></li>
+        <li><a href="#"><span></span>상담·민원</a></li>
+        <li><a href="#"><span></span>내카드관리</a></li>
+      </ul>
+    </section>
+    <section class="sub_cards">
+      <div class="cards_info">
+        <h2>귀여운 캐릭터와<br><span>혜택</span>을 동시에!</h2>
+        <p>더 다양한 캐릭터들이 궁금하신가요?<a href="#"></a></p>
+      </div>
+      <div class="cards_control">
+        <ul>
+          <li class="on" data-target="sanrio_cards"><a href="#">산리오</a></li>
+          <li data-target="shinjjang_cards"><a href="#">짱구</a></li>
+          <li data-target="doraemon_cards"><a href="#">도라에몽</a></li>
+          <li data-target="choego_cards" class="event"><a href="#">최고심</a></li>
+          <li data-target="kakao_cards"><a href="#">카카오</a></li>
+          <li data-target="loopy_cards"><a href="#">루피</a></li>
+          <li data-target="haribo_cards" class="event"><a href="#">하리보</a></li>
+          <li data-target="minions_cards"><a href="#">미니언즈</a></li>
+        </ul>
+      </div>
+      <div class="cards_container" data-target="sanrio_cards">
+        <div class="sanrio_cards">
+          <div class="info">
+            <img src="image/card1.png" alt="hangyodong">
+            <p>체크</p>
+            <strong>신한카드 Pick I 캐릭터형(한교동)</strong>
+            <a href="#">자세히 보기</a>
+          </div>
+          <div class="benefit">
+            <ul>
+              <li>
+                <img src="image/benefit1.png" alt="">
+                <div>
+                  <strong>편의점 <span>10% 적립</span></strong>
+                  <p>4대 편의점(GS25, CU, 세븐일레븐, 이마트24)</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit2.png" alt="">
+                <div>
+                  <strong>커피업종 <span>10% 적립</span></strong>
+                  <p>커피전문점 업종 통합 최대 1천 포인트까지 적립</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit3.png" alt="">
+                <div>
+                  <strong>디지털 구독 <span>10% 적립</span></strong>
+                  <p>음악, OTT, 도서, 각 영역별 최대 1 포인트까지 적립</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cards_container" data-target="shinjjang_cards" style="display: none;">
+        <div class="shinjjang_cards">
+          <div class="info">
+            <img src="image/card2.gif" alt="hangyodong">
+            <p>체크</p>
+            <strong>신한카드 SOL트래블 체크</strong>
+            <a href="#">자세히 보기</a>
+          </div>
+          <div class="benefit">
+            <ul>
+              <li>
+                <img src="image/benefit2-1.png" alt="">
+                <div>
+                  <strong>해외 이용<span> 수수료 면제</span></strong>
+                  <p>국제 브랜드 수수료1%<br>해외 서비스 수수료0.2% 면제</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit2-2.png" alt="">
+                <div>
+                  <strong>해외 여행 <span>서비스</span></strong>
+                  <p>더라운지 공항라운지 본인 무료 입장</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit2-3.png" alt="">
+                <div>
+                  <strong>국내 이용 <span>서비스</span></strong>
+                  <p>국내 대중교통 1% 할인<br>4대 편의점 5% 할인</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cards_container" data-target="doraemon_cards">
+        <div class="doraemon_cards">
+          <div class="info">
+            <img src="image/card3.gif" alt="hangyodong">
+            <p>체크</p>
+            <strong>신한카드 SOL트래블 체크</strong>
+            <a href="#">자세히 보기</a>
+          </div>
+          <div class="benefit">
+            <ul>
+              <li>
+                <img src="image/benefit2-1.png" alt="">
+                <div>
+                  <strong>해외 이용<span> 수수료 면제</span></strong>
+                  <p>국제 브랜드 수수료1%<br>해외 서비스 수수료0.2% 면제</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit2-2.png" alt="">
+                <div>
+                  <strong>해외 여행 <span>서비스</span></strong>
+                  <p>더라운지 공항라운지 본인 무료 입장</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit2-3.png" alt="">
+                <div>
+                  <strong>국내 이용 <span>서비스</span></strong>
+                  <p>국내 대중교통 1% 할인<br>4대 편의점 5% 할인</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cards_container" data-target="choego_cards">
+        <div class="choego_cards">
+          <div class="info">
+            <img src="image/card4.png" alt="hangyodong">
+            <p>체크</p>
+            <strong>신한카드 Way 체크(최고심)</strong>
+            <a href="#">자세히 보기</a>
+          </div>
+          <div class="benefit">
+            <ul>
+              <li>
+                <img src="image/benefit4-1.png" alt="">
+                <div>
+                  <strong>대중교통 <span>이용시 적립</span></strong>
+                  <p>대중교통(버스/지하철) 최대 5% 적립</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit4-2.png" alt="">
+                <div>
+                  <strong>생활편의영역 <span>이용시 적립</span></strong>
+                  <p>생활편의영역 최대 2% 적립</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit4-3.png" alt="">
+                <div>
+                  <strong>해외 이용 <span>금액 적립</span></strong>
+                  <p>해외 이용금액 1.3% 적립</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cards_container" data-target="kakao_cards">
+        <div class="kakao_cards">
+          <div class="info">
+            <img src="image/card5.png" alt="hangyodong">
+            <p>체크</p>
+            <strong>신한카드 KaPick</strong>
+            <a href="#">자세히 보기</a>
+          </div>
+          <div class="benefit">
+            <ul>
+              <li>
+                <img src="image/benefit5-1.png" alt="">
+                <div>
+                  <strong>주중 <span>서비스</span></strong>
+                  <p>요일별 서비스영역 대상 가맹점 이용 시<br>5% 카카오페이포인트 적립</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit5-2.png" alt="">
+                <div>
+                  <strong>주말 <span>서비스</span></strong>
+                  <p>토요일/일요일 중 카카오페이로 이용 시<br>3천 카카오페이포인트 적립(주 1회, 월 4회)</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit5-3.png" alt="">
+                <div>
+                  <strong>월간 <span>서비스</span></strong>
+                  <p>OTT 및 멤버십 서비스, 커피 대상가맹점 이용 시<br>10% 카카오페이포인트 적립</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cards_container" data-target="loopy_cards">
+        <div class="loopy_cards">
+          <div class="info">
+            <img src="image/card6.gif" alt="loopy">
+            <p>체크</p>
+            <strong>신한카드 Hey Young 체크(잔망루피)</strong>
+            <a href="#">자세히 보기</a>
+          </div>
+          <div class="benefit">
+            <ul>
+              <li>
+                <img src="image/benefit6-1.png" alt="">
+                <div>
+                  <strong>생활 <span>캐시백</span></strong>
+                  <p>대중교통, 이동통신, 영화, 편의점, 커피, 쿠팡<br>최대 5천원 캐시백 제공</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit6-2.png" alt="">
+                <div>
+                  <strong>간편결제(Pay) <span>캐시백</span></strong>
+                  <p>국내 이용 시 1% 캐시백</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit6-3.png" alt="">
+                <div>
+                  <strong>해외이용 <span>캐시백</span></strong>
+                  <p>해외 이용서비스(온라인포함) 1.2% 캐시백<br>해외 인출 1건당 $3 USD 캐시백 제공</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cards_container" data-target="haribo_cards">
+        <div class="haribo_cards">
+          <div class="info">
+            <img src="image/card7.png" alt="haribo">
+            <p>체크</p>
+            <strong>신한카드 Pick E 체크 캐릭터형(하리보)</strong>
+            <a href="#">자세히 보기</a>
+          </div>
+          <div class="benefit">
+            <ul>
+              <li>
+                <img src="image/benefit1.png" alt="">
+                <div>
+                  <strong>편의점 <span>10% 적립</span></strong>
+                  <p>4대 편의점(GS25, CU, 세븐일레븐, 이마트24)</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit2.png" alt="">
+                <div>
+                  <strong>커피업종 <span>10% 적립</span></strong>
+                  <p>커피전문점 업종 통합 최대 1천 포인트까지 적립</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit7-3.png" alt="">
+                <div>
+                  <strong>놀이 영역 <span>적립</span></strong>
+                  <p>사진관, 볼링장, 테니스장, 스키장 이용 시<br>마이신한포인트 10% 적립</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cards_container" data-target="minions_cards">
+        <div class="minions_cards">
+          <div class="info">
+            <img src="image/card8.png" alt="minions">
+            <p>체크</p>
+            <strong>신한카드 On 체크</strong>
+            <a href="#">자세히 보기</a>
+          </div>
+          <div class="benefit">
+            <ul>
+              <li>
+                <img src="image/benefit1.png" alt="">
+                <div>
+                  <strong>편의점 <span>10% 적립</span></strong>
+                  <p>4대 편의점(GS25, CU, 세븐일레븐, 이마트24)</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit2.png" alt="">
+                <div>
+                  <strong>커피업종 <span>10% 적립</span></strong>
+                  <p>커피전문점 업종 통합 최대 1천 포인트까지 적립</p>
+                </div>
+              </li>
+              <li>
+                <img src="image/benefit3.png" alt="">
+                <div>
+                  <strong>디지털 구독 <span>10% 적립</span></strong>
+                  <p>음악, OTT, 도서, 각 영역별 최대 1 포인트까지 적립</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="slider_wrap">
+      <div class="slide_container">
+        <ul class="slider">
+          <li>
+            <span>소비요정 잔망루피는
+              <br><strong>헤이영 체크 쓸거뤂!❤</strong></strong></span>
+            <p>선착순 3만명에게 잔망루피 스티커 증정</p>
+            <p>09/27 ~ 소진 시</p>
+            <img src="image/event_banner1.png" alt="">
+            <a href="#">바로가기</a>
+          </li>
+          <li>
+            <span>창립 17주년 기념<br><strong>뉴진스와 함께!</strong></strong></span>
+            <p>푸짐한 경품과 혜택을 만나보세요</p>
+            <p>09/30 ~ 10/31</p>
+            <img src="image/event_banner2.png" alt="">
+            <a href="#">바로가기</a>
+          </li>
+          <li>
+            <span>Point Plan<br><strong> 시즌 이벤트</strong></span>
+            <p>최대 5%, 1만 포인트까지 적립!</p>
+            <p>10/01 ~ 10/31</p>
+            <img src="image/event_banner3.png" alt="">
+            <a href="#">바로가기</a>
+          </li>
+          <li>
+            <span>자동결제 등록하고<br><strong>1만원 캐시백 받자!</strong></strong></span>
+            <p>2개월 연속 자동결제 시 1만원 캐시백 제공!</p>
+            <p>10/01 ~ 10/31</p>
+            <img src="image/event_banner4.png" alt="">
+            <a href="#">바로가기</a>
+          </li>
+        </ul>
+      </div>
+      <button class="prev">이전</button>
+      <button class="next">다음</button>
+    </section>
+    <section id="finance">
+      <h2>금융 서비스</h2>
+      <ul>
+        <li class="short_loan">
+          <span></span>
+          <div class="text">
+            <strong>단기카드대출</strong>
+            <span>현금서비스</span>
+          </div>
+          <p>최저 1만원부터 이용 OK!<br>카드대금 결제서비스로 편리하게!</p>
+          <a href="#">자세히 보기</a>
+        </li>
+        <li class="long_loan">
+          <span></span>
+          <div class="text">
+            <strong>장기카드대출</strong>
+            <span>카드론</span>
+          </div>
+          <p>중도상환 수수료 없이<br>모바일로 간편하게!</p>
+          <a href="#">자세히 보기</a>
+        </li>
+        <li class="revolving">
+          <span></span>
+          <div class="text">
+            <strong>일부결제금액<br>이월약정</strong>
+          </div>
+          <p>이번달 결제금액이 다음달로?<br>결제비율을 조절하여 리볼빙하기!</p>
+          <a href="#">자세히 보기</a>
+        </li>
+        <li class="credit_loan">
+          <span></span>
+          <div class="text">
+            <strong>가계신용대출<br>사업자대출 </strong>
+          </div>
+          <p>무서류, 무방문<br>신용대출 서비스</p>
+          <a href="#">자세히 보기</a>
+        </li>
+      </ul>
+    </section>
+    <section id="main_footer">
+      <div class="notice_main">
+        <div class="notice_header">
+          <h2>공지사항</h2>
+          <a href="#"><img src="image/service_arrow.png" alt="바로가기"></a></h2>
+        </div>
+        <ul class="notice_body">
+          <li><a href="#"><span>24.07.12</span> 광주은행 시스템 점검 안내</a></li>
+          <li><a href="#"><span>24.07.10</span> 신한카드 The LADY BEST 카드 서비스 변경</a></li>
+          <li><a href="#"><span>24.07.05</span> 신한카드 시스템 작업 안내</a></li>
+          <li><a href="#"><span>24.07.05</span> NH투자증권 전산 시스템 작업으로 인한 서비스</a></li>
+        </ul>
+      </div>
+      <div class="consumer_main">
+        <div class="consumer_header">
+          <h2>금융소비자주의경보</h2>
+          <a href="#"><img src="image/service_arrow.png" alt="바로가기"></a>
+        </div>
+        <ul class="notice_body">
+          <li><a href="#">2023년 보이스피싱 피해 현황 분석</a></li>
+          <li><a href="#">셀프주유소에서 카드결제 시 한도초과로 인한 초과결제</a></li>
+          <li><a href="#">카드발급 및 배송 관련 보이스피싱에 유의하세요</a></li>
+          <li><a href="#">물품 미배송 온라인 사기 거래 유의하세요</a></li>
+        </ul>
+      </div>
+      <div class="customer_service">
+        <h2>고객센터</h2>
+        <strong>고객센터 1544-7000 (해외) 82-2-3420-7000</strong>
+        <ul>
+          <li>카드분실신고 1544-7200</li>
+          <li>할부금융 1544-7100</li>
+          <li>카드신청 1661-8599</li>
+          <li>점자카드신청 1833-3135</li>
+          <li>금융신청 1588-0303</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer id="footer_main">
+    <section class="innerbox">
+      <div class="footer_top">
+        <ul class="footer_menu">
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">지배구조</a></li>
+          <li><a href="#">투자정보</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">고객권리 안내문</a></li>
+          <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+          <li><a href="#"><strong>위치기반서비스 이용약관</strong></a></li>
+          <li><a href="#">유료상품 이용현황</a></li>
+          <li><a href="#">금융소비자보호포털</a></li>
+          <li><a href="#"><strong>전자민원접수</strong></a></li>
+          <li><a href="#">상품공시실</a></li>
+          <li><a href="#">내부자 제보</a></li>
+        </ul>
+      </div>
+      <div class="footer_bottom">
+        <div class="family_group">
+          <button type="button" class="on">전용회원</button>
+          <ul class="family_list">
+            <li><a href="#">복지카드 회원</a></li>
+            <li><a href="#">웹프로카드 회원</a></li>
+            <li><a href="#">신한금융그룹 패밀리</a></li>
+            <li><a href="#">LG/LX/GS/LS/LIG</a></li>
+          </ul>
+          <button type="button" class="on">신한금융그룹</button>
+          <ul class="family_list">
+            <li><a href="#">신한금융지주회사</a></li>
+            <li><a href="#">신한은행</a></li>
+            <li><a href="#">신한투자증권</a></li>
+            <li><a href="#">신한라이프</a></li>
+            <li><a href="#">신한캐피탈</a></li>
+            <li><a href="#">제주은행</a></li>
+            <li><a href="#">신한저축은행</a></li>
+            <li><a href="#">신한자산신탁</a></li>
+            <li><a href="#">신한DS</a></li>
+            <li><a href="#">신한펀트파트너스</a></li>
+            <li><a href="#">신한신용정보</a></li>
+            <li><a href="#">신한리츠운용</a></li>
+            <li><a href="#">신한 AI</a></li>
+            <li><a href="#">신한벤처투차</a></li>
+            <li><a href="#">신한EZ손해보험</a></li>
+          </ul>
+        </div>
+        <div class="sns">
+          <ul>
+            <li><a href="https://www.instagram.com/shinhancard_official/">instagram</a></li>
+            <li><a href="https://www.facebook.com/shinhancard">facebook</a></li>
+            <li><a href="https://www.youtube.com/user/eshinhancard">youtube</a></li>
+            <li><a href="https://post.naver.com/shinhancard_official">naver</a></li>
+            <li><a href="https://pf.kakao.com/_exdsvM">kakao</a></li>
+          </ul>
+        </div>
+        <div class="footer_info">
+          <div>
+          <address>서울특별시 중구 을지로 100 (을지로2가, 파인에비뉴 A동)</address>
+          <p>대표이사 문동권 사업자등록번호 202-81-48079</p>
+          </div>
+          <p>&copy;Copyright 2020 Shinhancard Co.,Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    </section>
+  </footer>  
+</body>
+</html>
