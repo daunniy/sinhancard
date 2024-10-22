@@ -91,19 +91,38 @@ body{ font-family:'Noto sans KR','맑은 고딕',sans-serif; font-size:14px; col
   position:absolute;
   bottom:0px;
 }
+#main_header .back-button {
+  opacity:0;
+  visibility: hidden;
+  transition:all .3s;
+  width:40px; height:40px;
+  background:transparent url("../image/close.png") no-repeat;
+  background-size:contain;
+  border:0px;
+  text-indent:-9999px;
+  position:absolute;
+  top:20px; left:220px;
+  cursor: pointer;
+}
+#main_header .back-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 #main_header .search-bar {
   /* display: none; */
   position:absolute; left:-34%; transform:translateX(34%); bottom:-70px;
   width: 800px;
   height: 60px;
   border-radius:30px; border:1px solid #0046ff;
-  background-color: #fff;
   opacity:0;
   visibility: hidden;
   transition:all .3s;
   padding-left:40px;
   font-size:20px;
   box-shadow:1px 1px 2px 0 rgba(0,0,0,0.2);
+  background:#fff url("../image/search_black.png") no-repeat center right 30px;
+  background-size:30px 30px;
 }
 #main_header .search-bar.show {
   opacity: 1;
@@ -161,7 +180,7 @@ body{ font-family:'Noto sans KR','맑은 고딕',sans-serif; font-size:14px; col
 #main_container>.main_cards>.cards_control{ display:flex; justify-content:space-between; align-items:center; padding-bottom:10px; margin-bottom:40px; border-bottom:1px solid #ccc; }
 #main_container>.main_cards>.cards_control>ul{ display:flex; gap:20px; }
 #main_container>.main_cards>.cards_control>ul>li>a{ font-size:24px; font-weight:bold; color:#999; letter-spacing:-1px; }
-#main_container>.main_cards>.cards_control>ul>li.on>a{ color:#333; border-bottom:3px solid #333; padding-bottom:9px; }
+#main_container>.main_cards>.cards_control>ul>li.on>a{ color:#333; border-bottom:3px solid #333; padding-bottom:11px; }
 #main_container>.main_cards>.cards_control>a{ color:#333; margin:20px 20px 0 0 ; position:relative; }
 #main_container>.main_cards>.cards_control>a::after{
   content:""; display:inline-block; width:20px; height:20px; background:url("../image/card_more.png") no-repeat right; position:absolute; top:0px;
@@ -281,7 +300,7 @@ body{ font-family:'Noto sans KR','맑은 고딕',sans-serif; font-size:14px; col
 
 #main_container>#quick_menu{ width:1280px; margin:80px auto; }
 #main_container>#quick_menu>ul{ display:flex; justify-content:space-between; align-items:center; }
-#main_container>#quick_menu>ul>li{ min-width:94px; display:flex; }
+#main_container>#quick_menu>ul>li{ display:flex; }
 #main_container>#quick_menu>ul>li>a{ color:#333; font-size:20px; transition:all .3s; }
 #main_container>#quick_menu>ul>li:hover>a{ color:#0046FF; font-weight:600; }
 #main_container>#quick_menu>ul>li>a>span{
@@ -403,6 +422,22 @@ body{ font-family:'Noto sans KR','맑은 고딕',sans-serif; font-size:14px; col
   #main_header>.header_body>.menu>button{ height:36px; }
   #main_header>.header_body>.menu>.search{ display:none; }
 
+
+  #main_header .search-bar{
+    width:80vw; height:40px; left:-10vw; top:20px; position:absolute;
+    padding-left:30px;
+  }
+
+  #main_header .search-recommend {
+    width:100vw; top:62px; left:-34vw; padding:20px 1px; height:240px;
+  }
+  #main_header .search-recommend ul {
+    flex-wrap:wrap; gap:10px; margin-bottom:20px;
+  }
+  #main_header .search-recommend ul>li{
+    font-size:12px;
+  }
+
   #main_header>.header_body .gnb{
     width:100%; height:100vh; position:absolute; top:38px;
     background-color:#fff;
@@ -469,7 +504,10 @@ body{ font-family:'Noto sans KR','맑은 고딕',sans-serif; font-size:14px; col
     transition: transform 0.5s ease-in-out;
     width: 400%; /* 슬라이드 개수에 따라 너비 설정 */
   }
-  
+
+  #main_container>.main_cards>div>ul>li>a>img:hover{
+    transform:scale(1)
+  }
   #main_container>#slider_wrap>.slide_container>.slider>li {
     min-width:0px; height:500px; margin:0 10px;
      /* 모바일 화면에 맞게 슬라이드 너비 설정 */

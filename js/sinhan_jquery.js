@@ -2,12 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // PC 버전 (1280px 이상)
   if (window.innerWidth >= 1280) {
     const mainHeader = document.getElementById('main_header');
+    const searchBar = document.querySelector('.search-bar');
+    const backBtn = document.querySelector('.back-button');
 
-    // 스크롤에 따른 box-shadow 적용
     window.addEventListener('scroll', () => {
+      // 스크롤에 따른 box-shadow 적용
       mainHeader.style.boxShadow = window.scrollY > 50 
         ? '0 4px 6px rgba(0, 0, 0, 0.1)' 
         : 'none';
+        if (window.scrollY > 40) {
+          searchBar.style.opacity = 0;
+          backBtn.style.opacity = 0;
+      } else {
+        searchBar.style.opacity = 1;
+        backBtn.style.opacity = 1;
+      }
     });
 
     // 챗봇 팝업창 열기
@@ -17,18 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const searchButton = document.querySelector('.search');
-    const searchBar = document.querySelector('.search-bar');
 
     searchButton.addEventListener('click', () => {
-        searchBar.classList.toggle('show'); // 클래스 토글
+      searchBar.classList.toggle('show'); // 클래스 토글
+      backBtn.classList.toggle('show');
     });
+    backBtn.addEventListener('click', ()=>{
+      searchBar.classList.remove('show');
+      backBtn.classList.remove('show');
+    })
 
     const searchRecommend = document.querySelector('.search-recommend');
 
     // search-bar에 포커스가 생기면 추천 검색어를 표시
     searchBar.addEventListener('focus', () => {
-        searchRecommend.classList.add('show');
-        document.getElementById('overlay').classList.add('show');
+      searchRecommend.classList.add('show');
+      document.getElementById('overlay').classList.add('show');
     });
 
     // search-bar에 포커스가 벗어나면 추천 검색어를 숨김
@@ -162,6 +175,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 모바일 버전 (768px 이하)
   if (window.innerWidth <= 768) {
+
+
+
+
+
+
     const slider = document.querySelector('.slide_container');
     const slides = document.querySelectorAll('.slider li');
     const totalSlides = slides.length;
