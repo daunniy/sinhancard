@@ -1,9 +1,12 @@
+document.addEventListener('touchstart', function() {}, {passive: true});
+
 document.addEventListener('DOMContentLoaded', () => {
   // PC 버전 (1280px 이상)
   if (window.innerWidth >= 1280) {
     const mainHeader = document.getElementById('main_header');
     const searchBar = document.querySelector('.search-bar');
     const backBtn = document.querySelector('.back-button');
+    const searchButton = document.querySelector('.search');
 
     window.addEventListener('scroll', () => {
       // 스크롤에 따른 box-shadow 적용
@@ -11,21 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ? '0 4px 6px rgba(0, 0, 0, 0.1)' 
         : 'none';
         if (window.scrollY > 40) {
-          searchBar.style.opacity = 0;
-          backBtn.style.opacity = 0;
+          searchButton.style.opacity = 0;
       } else {
-        searchBar.style.opacity = 1;
-        backBtn.style.opacity = 1;
+        searchButton.style.opacity = 1;
       }
     });
 
-    // 챗봇 팝업창 열기
-    document.querySelector('.chatbot').addEventListener('click', (event) => {
-      event.preventDefault();
-      window.open('https://www.shinhancard.com/eer/EERPROXY/chatWindowNA.shc', 'chatWindow', 'width=600,height=800,scrollbars=yes');
-    });
 
-    const searchButton = document.querySelector('.search');
 
     searchButton.addEventListener('click', () => {
       searchBar.classList.toggle('show'); // 클래스 토글
@@ -175,6 +170,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 모바일 버전 (768px 이하)
   if (window.innerWidth <= 768) {
+    const mainHeader = document.getElementById('main_header');
+    const searchBar = document.querySelector('.search-bar');
+    const searchButton = document.querySelector('.search')
+    const searchRecommend = document.querySelector('.search-recommend');
+
+    window.addEventListener('scroll', () => {
+      // 스크롤에 따른 box-shadow 적용
+      mainHeader.style.boxShadow = window.scrollY > 50 
+        ? '0 4px 6px rgba(0, 0, 0, 0.1)' 
+        : 'none';
+    });
+
+
+    searchButton.addEventListener('click', () => {
+      searchBar.classList.toggle('show'); // 클래스 토글
+      searchRecommend.classList.toggle('show');
+    });
 
 
 
@@ -246,6 +258,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+    // 챗봇 팝업창 열기
+    document.querySelector('.chatbot').addEventListener('click', (event) => {
+      event.preventDefault();
+      window.open('https://www.shinhancard.com/eer/EERPROXY/chatWindowNA.shc', 'chatWindow', 'width=600,height=800,scrollbars=yes');
+    });
 
 
   // 카드 항목 클릭 이벤트 처리
